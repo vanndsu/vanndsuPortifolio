@@ -1,81 +1,175 @@
-
-:root{
-    --azul-cinza: #3b576d;
+:root {
+  --azul-cinza: #3b576d;
 }
 
-body{
+body {
   margin: 0;
-/*INICIO CABEÇALHO*/
-}
-header{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;    
-    align-items: center;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-}
-header .logo{
-    font-size: 23px;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.menu{
-    display: flex;
-    flex-direction: column;
+/*INICIO CABEÇALHO*/
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
 }
-.menu .menu-line{
-    border: 1px solid #000000;
-    width: 22px;
-    margin-bottom: 5px;
+header .logo {
+  font-size: 23px;
+  font-weight: bold;
+  color: #fff;
 }
-.menu:hover{
-   cursor: pointer;
-    .menu-line{
-        border-color: rgb(77, 77, 78);
-    }
+
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+.menu .menu-line {
+  border: 1px solid rgb(39, 39, 39);
+  width: 22px;
+  margin-bottom: 5px;
+}
+.menu:hover {
+  cursor: pointer;
+  .menu-line {
+    border-color: rgb(77, 77, 78);
+  }
 }
 /*FIM CABEÇALHO*/
 
 /*PRINCIPAL*/
 
-.container{
-    display: flex;
-    height: calc(100vh);
-    
+.container {
+  display: flex;
+  height: calc(100vh);
 }
-.container .leftside{
-    background-color: rgb(0, 132, 255);
-    color: azure;
-    flex: 1;
+/*LADO ESQUERDO*/
+.container .leftside {
+  background-color: #0b86b2;
+  color: azure;
+  flex: 1;
+  display: flex;
+  padding: 0 30px;
 }
-.container .rightside{
+.container .leftside .info {
+  margin: auto;
+  color: #fff;
+}
+.info .profession {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 19px;
+}
+.info .name {
+  font-weight: bold;
+  font-size: 80px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.info .buttons a {
+  display: inline-block;
+  background-color: #fff;
+  color: #0b86b2;
+  padding: 20px 40px;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0px 0px 5px #333;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+.buttons a.hireme {
+  background-color: rgb(39, 39, 39);
+  color: #fff;
+}
+.info .buttons a:hover {
+  opacity: 0.9;
+}
+
+/*FIM LADO ESQUERDO*/
+
+/*LADO DIREITO*/
+.container .rightside {
+  display: flex;
+  background-color: rgb(238, 244, 248);
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+.container .rightside .area-foto {
+  width: 400px;
+  height: 400px;
+  background-color: black;
+  background-image: url(../images/vann.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 5px solid #0b86b2;
+}
+
+/*FIM LADO DIREITO*/
+
+/*RODAPÉ*/
+footer {
+  color: #fff;
+  padding: 20px;
+  font-size: 13px;
+}
+/*FIM RODAPÉ*/
+
+@media (max-width: 850px) {
+  .container {
+    flex-direction: column;
+    height: 100%;
+  }
+  .menu .menu-line {
+    border: 2px solid #000000;
+    width: 40px;
+    margin-bottom: 10px;
+  }
+  header {
+    position: static;
+    background-color: #0b86b2;
+    margin-bottom: 0;
+  }
+  body .container .leftside {
+    flex: 0;
+    padding: 15px;
+  }
+  .container .leftside .info {
     display: flex;
-   background-color: aliceblue;
-    flex: 1;
+    flex-direction: column;
+    text-align: center;
     align-items: center;
-    justify-content: center;
+  }
+  .container .rightside {
+    flex: 0;
+    padding: 10px;
+  }
+  .container .rightside .area-foto {
+    height: 300px;
+    width: 300px;
+  }
+  footer {
+    color: #000000;
+    font-size: 14px;
+    background-color: rgb(238, 244, 248);
+  }
 }
-.container .rightside .area-foto{
-    width: 400px;
-    height: 400px;
-    background-color: black ;
-    background-image: url(../images/vann.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-    border: 5px solid rgb(0, 132, 255);
-    
-}
-
-
-footer{
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
+@media (max-width: 423px) {
+  .info .name {
+    font-size: 55px;
+  }
+  .buttons a.hireme {
+    margin-top: 10px;
+  }
+  footer {
+    font-size: 10px;
+    padding: 11px;
+  }
 }
