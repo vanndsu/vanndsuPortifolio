@@ -39,6 +39,37 @@ header .logo {
     border-color: rgb(77, 77, 78);
   }
 }
+
+.area-menu{
+    background-color: #0b86b2;
+    height: 400px;
+    width: 300px;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    display: none;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px #333;
+    
+}
+.area-menu ul{
+    list-style: none;
+}
+.area-menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    
+}
+.area-menu ul li a:hover{
+    
+    color: #333;
+    
+}
+.area-menu ul li{
+    margin-bottom: 25px;
+}
 /*FIM CABEÇALHO*/
 
 /*PRINCIPAL*/
@@ -116,9 +147,13 @@ header .logo {
 
 /*RODAPÉ*/
 footer {
-  color: #fff;
+  color: #ffffff;
   padding: 20px;
-  font-size: 13px;
+  font-size: 12px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 /*FIM RODAPÉ*/
 
@@ -127,11 +162,7 @@ footer {
     flex-direction: column;
     height: 100%;
   }
-  .menu .menu-line {
-    border: 2px solid #000000;
-    width: 40px;
-    margin-bottom: 10px;
-  }
+ 
   header {
     position: static;
     background-color: #0b86b2;
@@ -159,6 +190,7 @@ footer {
     color: #000000;
     font-size: 14px;
     background-color: rgb(238, 244, 248);
+    position: initial;
   }
 }
 @media (max-width: 423px) {
@@ -171,5 +203,6 @@ footer {
   footer {
     font-size: 10px;
     padding: 11px;
+    
   }
 }
