@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Port Vanndsu</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/js/action.js" />
+
+    <script type="text/javascript">
+      window.onload = function () {
+        document.querySelector(".menu").addEventListener("click", function () {
+          if (document.querySelector(".area-menu").style.display == "flex") {
+            document.querySelector(".area-menu").style.display = "none";
+          } else {
+            document.querySelector(".area-menu").style.display = "flex";
+          }
+        });
+      };
+    </script>
   </head>
   <body>
     <header>
@@ -13,6 +26,17 @@
         <div class="menu-line"></div>
         <div class="menu-line"></div>
         <div class="menu-line"></div>
+      </div>
+
+      <div class="area-menu">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Projects</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Experiences</a></li>
+          <li><a href="">Works</a></li>
+        </ul>
       </div>
     </header>
     <section class="container">
