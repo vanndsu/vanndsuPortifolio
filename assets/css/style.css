@@ -1,0 +1,81 @@
+
+:root{
+    --azul-cinza: #3b576d;
+}
+
+body{
+  margin: 0;
+/*INICIO CABEÇALHO*/
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;    
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+header .logo{
+    font-size: 23px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+}
+.menu .menu-line{
+    border: 1px solid #000000;
+    width: 22px;
+    margin-bottom: 5px;
+}
+.menu:hover{
+   cursor: pointer;
+    .menu-line{
+        border-color: rgb(77, 77, 78);
+    }
+}
+/*FIM CABEÇALHO*/
+
+/*PRINCIPAL*/
+
+.container{
+    display: flex;
+    height: calc(100vh);
+    
+}
+.container .leftside{
+    background-color: rgb(0, 132, 255);
+    color: azure;
+    flex: 1;
+}
+.container .rightside{
+    display: flex;
+   background-color: aliceblue;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+.container .rightside .area-foto{
+    width: 400px;
+    height: 400px;
+    background-color: black ;
+    background-image: url(../images/vann.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: 5px solid rgb(0, 132, 255);
+    
+}
+
+
+footer{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
