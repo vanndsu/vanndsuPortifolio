@@ -6,26 +6,15 @@
     <title>Port Vanndsu</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/js/action.js" />
-
-    <script type="text/javascript">
-      window.onload = function () {
-        document.querySelector(".menu").addEventListener("click", function () {
-          if (document.querySelector(".area-menu").style.display == "flex") {
-            document.querySelector(".area-menu").style.display = "none";
-          } else {
-            document.querySelector(".area-menu").style.display = "flex";
-          }
-        });
-      };
-    </script>
   </head>
   <body>
     <header>
       <div class="logo">Vndsu.</div>
       <div class="menu">
-        <div class="menu-line"></div>
-        <div class="menu-line"></div>
-        <div class="menu-line"></div>
+        <div class="menu-line">
+          <img src="assets/images/bouncing-circles.svg" alt="" id="img1" />
+          <img src="assets/images/fade-stagger-circles.svg" alt="" id="img2" />
+        </div>
       </div>
 
       <div class="area-menu">
@@ -42,11 +31,11 @@
     <section class="container">
       <div class="leftside">
         <div class="info">
-          <div class="profession">Web Developer</div>
+          <div class="profession">Bem Vindo ao Meu Portifólio!</div>
           <div class="name">I'm Vanderson Ribeiro</div>
           <div class="buttons">
-            <a href="">More About Me</a>
-            <a href="" class="hireme">Hire Me</a>
+            <a href="">SOBRE MIM</a>
+            <a href="" class="hireme">CONTATE-ME</a>
           </div>
         </div>
       </div>
@@ -58,4 +47,29 @@
       Copyright © 2023 Vanderson Ribeiro. Todos os direitos reservados.
     </footer>
   </body>
+  <script type="text/javascript">
+    window.onload = function () {
+      document.querySelector(".menu").addEventListener("click", function () {
+        if (document.querySelector(".area-menu").style.display == "flex") {
+          document.querySelector(".area-menu").style.display = "none";
+        } else {
+          document.querySelector(".area-menu").style.display = "flex";
+        }
+      });
+    };
+
+    var imge1 = document.getElementById("img1");
+    var imge2 = document.getElementById("img2");
+
+    imge1.addEventListener("click", () => {
+      trocarImg(imge1, imge2);
+    });
+    imge2.addEventListener("click", () => {
+      trocarImg(imge2, imge1);
+    });
+    function trocarImg(oculta, exibe) {
+      oculta.style.display = "none";
+      exibe.style.display = "block";
+    }
+  </script>
 </html>

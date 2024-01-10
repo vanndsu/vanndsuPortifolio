@@ -27,17 +27,24 @@ header .logo {
 .menu {
   display: flex;
   flex-direction: column;
+ 
 }
 .menu .menu-line {
-  border: 1px solid rgb(39, 39, 39);
+  
   width: 22px;
-  margin-bottom: 5px;
+
+}
+.menu-line #img2{
+  display: none;
 }
 .menu:hover {
   cursor: pointer;
+  transform: scale(1.2,1.2);
+  transition: transform 0.3s ease-in-out;
   .menu-line {
     border-color: rgb(77, 77, 78);
   }
+  
 }
 
 .area-menu{
@@ -52,6 +59,7 @@ header .logo {
     display: none;
     border-radius: 3px;
     box-shadow: 0px 0px 5px #333;
+   
     
 }
 .area-menu ul{
